@@ -22,6 +22,8 @@ namespace Monte_Carlos
         public Conexion()
         {
            
+
+
             //// yovany
             bd = "ventas_comedor";
             servidor = "127.0.0.1";

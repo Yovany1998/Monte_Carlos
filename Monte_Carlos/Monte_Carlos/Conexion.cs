@@ -24,7 +24,7 @@ namespace Monte_Carlos
            
 
             //// yovany
-            bd = "makeupbar";
+            bd = "ventas_comedor";
             servidor = "127.0.0.1";
             usuario = "root";
             pass = "987654321";

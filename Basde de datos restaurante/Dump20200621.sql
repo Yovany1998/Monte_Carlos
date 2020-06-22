@@ -30,7 +30,7 @@ DROP TABLE IF EXISTS `bebida`;
 CREATE TABLE `bebida` (
   `idBebida` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
-  `precio` int NOT NULL,
+  `precio` float NOT NULL,
   `descripcion` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idBebida`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -58,7 +58,7 @@ CREATE TABLE `caja` (
   `idCliente` int NOT NULL,
   `idMesa` int NOT NULL,
   `idPedido` int NOT NULL,
-  `Total` int NOT NULL,
+  `Total` float NOT NULL,
   PRIMARY KEY (`idCaja`),
   KEY `idEmpleado_idx` (`idEmpleado`,`idCaja`),
   KEY `idCliente_idx` (`idCliente`),
@@ -113,8 +113,8 @@ DROP TABLE IF EXISTS `comida`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `comida` (
   `idComida`int NOT NULL AUTO_INCREMENT,
-  `precio` int NOT NULL,
   `comida` varchar(45) NOT NULL,
+  `precio` float NOT NULL,
   `descripcion` varchar(45) NOT NULL,
   PRIMARY KEY (`idComida`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -165,7 +165,7 @@ DROP TABLE IF EXISTS `factura`;
 CREATE TABLE `factura` (
   `idFactura` int NOT NULL AUTO_INCREMENT,
   `idCaja` int NOT NULL,
-  `fecha` datetime NOT NULL,
+  `fecha` datetime NULL default current_timestamp,
   PRIMARY KEY (`idFactura`),
   KEY `idCaja_idx` (`idCaja`),
   CONSTRAINT `idCaja` FOREIGN KEY (`idCaja`) REFERENCES `factura` (`idFactura`)

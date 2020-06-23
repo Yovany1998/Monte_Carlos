@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.btnReturn = new System.Windows.Forms.Button();
+            this.dvEmpleado = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dvEmpleado)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -48,14 +50,25 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // dvEmpleado
+            // 
+            this.dvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvEmpleado.Location = new System.Drawing.Point(139, 69);
+            this.dvEmpleado.Name = "dvEmpleado";
+            this.dvEmpleado.RowHeadersWidth = 51;
+            this.dvEmpleado.Size = new System.Drawing.Size(628, 313);
+            this.dvEmpleado.TabIndex = 9;
+            // 
             // Ver_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dvEmpleado);
             this.Controls.Add(this.btnReturn);
             this.Name = "Ver_Empleado";
             this.Text = "Ver_Empleado";
+            ((System.ComponentModel.ISupportInitialize)(this.dvEmpleado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DataGridView dvEmpleado;
     }
 }

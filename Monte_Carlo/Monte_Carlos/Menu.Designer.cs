@@ -48,10 +48,9 @@
             this.btnReservaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservaciones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReservaciones.Location = new System.Drawing.Point(11, 306);
-            this.btnReservaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReservaciones.Location = new System.Drawing.Point(8, 249);
             this.btnReservaciones.Name = "btnReservaciones";
-            this.btnReservaciones.Size = new System.Drawing.Size(180, 50);
+            this.btnReservaciones.Size = new System.Drawing.Size(135, 41);
             this.btnReservaciones.TabIndex = 10;
             this.btnReservaciones.Text = "Reservacion";
             this.btnReservaciones.UseVisualStyleBackColor = false;
@@ -63,10 +62,9 @@
             this.Venta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Venta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Venta.Location = new System.Drawing.Point(12, 95);
-            this.Venta.Margin = new System.Windows.Forms.Padding(4);
+            this.Venta.Location = new System.Drawing.Point(9, 77);
             this.Venta.Name = "Venta";
-            this.Venta.Size = new System.Drawing.Size(180, 50);
+            this.Venta.Size = new System.Drawing.Size(135, 41);
             this.Venta.TabIndex = 9;
             this.Venta.Text = "Venta";
             this.Venta.UseVisualStyleBackColor = false;
@@ -78,10 +76,9 @@
             this.btnservicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnservicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnservicio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnservicio.Location = new System.Drawing.Point(12, 165);
-            this.btnservicio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnservicio.Location = new System.Drawing.Point(9, 134);
             this.btnservicio.Name = "btnservicio";
-            this.btnservicio.Size = new System.Drawing.Size(180, 51);
+            this.btnservicio.Size = new System.Drawing.Size(135, 41);
             this.btnservicio.TabIndex = 8;
             this.btnservicio.Text = "Servicio";
             this.btnservicio.UseVisualStyleBackColor = false;
@@ -93,10 +90,9 @@
             this.btnempleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnempleado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnempleado.Location = new System.Drawing.Point(12, 236);
-            this.btnempleado.Margin = new System.Windows.Forms.Padding(4);
+            this.btnempleado.Location = new System.Drawing.Point(9, 192);
             this.btnempleado.Name = "btnempleado";
-            this.btnempleado.Size = new System.Drawing.Size(180, 50);
+            this.btnempleado.Size = new System.Drawing.Size(135, 41);
             this.btnempleado.TabIndex = 7;
             this.btnempleado.Text = "Empleado";
             this.btnempleado.UseVisualStyleBackColor = false;
@@ -108,10 +104,9 @@
             this.btncliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btncliente.Location = new System.Drawing.Point(12, 372);
-            this.btncliente.Margin = new System.Windows.Forms.Padding(4);
+            this.btncliente.Location = new System.Drawing.Point(9, 302);
             this.btncliente.Name = "btncliente";
-            this.btncliente.Size = new System.Drawing.Size(179, 51);
+            this.btncliente.Size = new System.Drawing.Size(134, 41);
             this.btncliente.TabIndex = 6;
             this.btncliente.Text = "Cliente";
             this.btncliente.UseVisualStyleBackColor = false;
@@ -123,10 +118,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(13, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(10, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 51);
+            this.button1.Size = new System.Drawing.Size(134, 41);
             this.button1.TabIndex = 12;
             this.button1.Text = "Carta";
             this.button1.UseVisualStyleBackColor = false;
@@ -135,9 +129,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Monte_Carlos.Properties.Resources.conjunto_ilustracion_logotipo_restaurante_vintage_23_2148470301;
-            this.pictureBox1.Location = new System.Drawing.Point(288, 122);
+            this.pictureBox1.Location = new System.Drawing.Point(216, 99);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(475, 301);
+            this.pictureBox1.Size = new System.Drawing.Size(356, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -147,9 +142,10 @@
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.Peru;
-            this.lblHora.Location = new System.Drawing.Point(411, 23);
+            this.lblHora.Location = new System.Drawing.Point(308, 19);
+            this.lblHora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(190, 69);
+            this.lblHora.Size = new System.Drawing.Size(152, 55);
             this.lblHora.TabIndex = 13;
             this.lblHora.Text = "label1";
             // 
@@ -158,9 +154,10 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(454, 83);
+            this.lblFecha.Location = new System.Drawing.Point(340, 67);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(64, 25);
+            this.lblFecha.Size = new System.Drawing.Size(51, 20);
             this.lblFecha.TabIndex = 14;
             this.lblFecha.Text = "label1";
             this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
@@ -172,10 +169,10 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(851, 434);
+            this.ClientSize = new System.Drawing.Size(638, 353);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.button1);
@@ -185,7 +182,6 @@
             this.Controls.Add(this.btnservicio);
             this.Controls.Add(this.btnempleado);
             this.Controls.Add(this.btncliente);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Menu";

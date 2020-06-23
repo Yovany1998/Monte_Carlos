@@ -52,10 +52,11 @@
             // textBox3
             // 
             this.textBox3.AllowDrop = true;
-            this.textBox3.Location = new System.Drawing.Point(221, 229);
+            this.textBox3.Location = new System.Drawing.Point(166, 186);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 72);
+            this.textBox3.Size = new System.Drawing.Size(148, 59);
             this.textBox3.TabIndex = 42;
             // 
             // dataGridView1
@@ -67,11 +68,12 @@
             this.Fecha,
             this.Hora_reservacion});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 336);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 273);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(769, 202);
+            this.dataGridView1.Size = new System.Drawing.Size(577, 164);
             this.dataGridView1.TabIndex = 41;
             // 
             // Nombre_Cliente
@@ -105,19 +107,21 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 229);
+            this.label3.Location = new System.Drawing.Point(45, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 29);
+            this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 38;
             this.label3.Text = "Descripcion:";
             // 
             // textBox2
             // 
             this.textBox2.AllowDrop = true;
-            this.textBox2.Location = new System.Drawing.Point(221, 170);
+            this.textBox2.Location = new System.Drawing.Point(166, 138);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 28);
+            this.textBox2.Size = new System.Drawing.Size(148, 24);
             this.textBox2.TabIndex = 37;
             // 
             // panel1
@@ -128,16 +132,18 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(769, 70);
+            this.panel1.Size = new System.Drawing.Size(577, 57);
             this.panel1.TabIndex = 36;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(311, 0);
+            this.label6.Location = new System.Drawing.Point(233, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(221, 70);
+            this.label6.Size = new System.Drawing.Size(166, 57);
             this.label6.TabIndex = 2;
             this.label6.Text = "Comidas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,8 +152,9 @@
             // 
             this.pictureBox2.Image = global::Monte_Carlos.Properties.Resources.conjunto_ilustracion_logotipo_restaurante_vintage_23_2148470301;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(86, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -155,45 +162,50 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Monte_Carlos.Properties.Resources._64497;
-            this.pictureBox1.Location = new System.Drawing.Point(669, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(502, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 171);
+            this.label2.Location = new System.Drawing.Point(45, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 29);
+            this.label2.Size = new System.Drawing.Size(94, 24);
             this.label2.TabIndex = 35;
             this.label2.Text = "Precio:";
             // 
             // textBox1
             // 
             this.textBox1.AllowDrop = true;
-            this.textBox1.Location = new System.Drawing.Point(221, 111);
+            this.textBox1.Location = new System.Drawing.Point(166, 90);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 28);
+            this.textBox1.Size = new System.Drawing.Size(148, 24);
             this.textBox1.TabIndex = 34;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 111);
+            this.label1.Location = new System.Drawing.Point(45, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 29);
+            this.label1.Size = new System.Drawing.Size(94, 24);
             this.label1.TabIndex = 33;
             this.label1.Text = "Nombre:";
             // 
             // Ingreso_Comida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 538);
+            this.ClientSize = new System.Drawing.Size(577, 437);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -202,6 +214,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Ingreso_Comida";
             this.Text = "Ingreso_Comida";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

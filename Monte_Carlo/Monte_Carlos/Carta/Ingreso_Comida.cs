@@ -16,5 +16,12 @@ namespace Monte_Carlos.Carta
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Carta ventana = new Menu_Carta();
+            ventana.Show();
+        }
     }
 }

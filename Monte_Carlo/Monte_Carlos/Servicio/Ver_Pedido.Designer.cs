@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.btnReturn = new System.Windows.Forms.Button();
+            this.dvPedido = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dvPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -48,14 +50,26 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // dvPedido
+            // 
+            this.dvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvPedido.Location = new System.Drawing.Point(125, 65);
+            this.dvPedido.Name = "dvPedido";
+            this.dvPedido.RowHeadersWidth = 51;
+            this.dvPedido.Size = new System.Drawing.Size(628, 313);
+            this.dvPedido.TabIndex = 9;
+            // 
             // Ver_Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dvPedido);
             this.Controls.Add(this.btnReturn);
             this.Name = "Ver_Pedido";
             this.Text = "Ver_Pedido";
+            this.Load += new System.EventHandler(this.Ver_Pedido_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dvPedido)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +77,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DataGridView dvPedido;
     }
 }

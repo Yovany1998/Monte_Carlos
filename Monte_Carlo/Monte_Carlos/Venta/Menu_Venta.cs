@@ -38,11 +38,5 @@ namespace Monte_Carlos.Venta
             ventana.Show();
         }
 
-        private void btnVerVenta_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Ver_Venta ventana = new Ver_Venta();
-            ventana.Show();
-        }
     }
 }

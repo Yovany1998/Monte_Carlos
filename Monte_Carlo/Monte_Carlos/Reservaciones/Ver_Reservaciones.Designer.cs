@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.btnReturn = new System.Windows.Forms.Button();
+            this.dvReservaciones = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dvReservaciones)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -48,14 +50,25 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // dvReservaciones
+            // 
+            this.dvReservaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvReservaciones.Location = new System.Drawing.Point(120, 68);
+            this.dvReservaciones.Name = "dvReservaciones";
+            this.dvReservaciones.RowHeadersWidth = 51;
+            this.dvReservaciones.Size = new System.Drawing.Size(628, 313);
+            this.dvReservaciones.TabIndex = 9;
+            // 
             // Ver_Reservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dvReservaciones);
             this.Controls.Add(this.btnReturn);
             this.Name = "Ver_Reservaciones";
             this.Text = "Ver_Reservaciones";
+            ((System.ComponentModel.ISupportInitialize)(this.dvReservaciones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DataGridView dvReservaciones;
     }
 }

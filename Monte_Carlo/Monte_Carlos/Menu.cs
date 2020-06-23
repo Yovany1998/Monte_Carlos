@@ -1,4 +1,5 @@
-﻿using Monte_Carlos.Empleado;
+﻿using Monte_Carlos.Carta;
+using Monte_Carlos.Empleado;
 using Monte_Carlos.Reservaciones;
 using Monte_Carlos.Servicio;
 using Monte_Carlos.Venta;
@@ -72,6 +73,14 @@ namespace Monte_Carlos
             this.Hide();
             Menu_Reservaciones ventana = new Menu_Reservaciones();
             ventana.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Carta ventana = new Menu_Carta();
+            ventana.Show();
+
         }
     }
 }

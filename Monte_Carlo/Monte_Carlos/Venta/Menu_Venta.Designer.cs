@@ -30,7 +30,6 @@
         {
             this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnFactura = new System.Windows.Forms.Button();
-            this.btnVerVenta = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,16 +52,6 @@
             this.btnFactura.Text = "Facturas";
             this.btnFactura.UseVisualStyleBackColor = true;
             this.btnFactura.Click += new System.EventHandler(this.btnFactura_Click);
-            // 
-            // btnVerVenta
-            // 
-            this.btnVerVenta.Location = new System.Drawing.Point(127, 214);
-            this.btnVerVenta.Name = "btnVerVenta";
-            this.btnVerVenta.Size = new System.Drawing.Size(162, 139);
-            this.btnVerVenta.TabIndex = 2;
-            this.btnVerVenta.Text = "Ver Venta";
-            this.btnVerVenta.UseVisualStyleBackColor = true;
-            this.btnVerVenta.Click += new System.EventHandler(this.btnVerVenta_Click);
             // 
             // btnReturn
             // 
@@ -88,7 +77,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(672, 399);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.btnVerVenta);
             this.Controls.Add(this.btnFactura);
             this.Controls.Add(this.btnGenerarVenta);
             this.Name = "Menu_Venta";
@@ -101,7 +89,6 @@
 
         private System.Windows.Forms.Button btnGenerarVenta;
         private System.Windows.Forms.Button btnFactura;
-        private System.Windows.Forms.Button btnVerVenta;
         private System.Windows.Forms.Button btnReturn;
     }
 }

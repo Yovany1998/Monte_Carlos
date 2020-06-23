@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.btnReturn = new System.Windows.Forms.Button();
+            this.dvClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -48,14 +50,25 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // dvClientes
+            // 
+            this.dvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvClientes.Location = new System.Drawing.Point(126, 82);
+            this.dvClientes.Name = "dvClientes";
+            this.dvClientes.RowHeadersWidth = 51;
+            this.dvClientes.Size = new System.Drawing.Size(628, 313);
+            this.dvClientes.TabIndex = 8;
+            // 
             // Ver_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dvClientes);
             this.Controls.Add(this.btnReturn);
             this.Name = "Ver_Cliente";
             this.Text = "Ver_Cliente";
+            ((System.ComponentModel.ISupportInitialize)(this.dvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +76,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DataGridView dvClientes;
     }
 }

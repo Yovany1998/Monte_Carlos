@@ -68,6 +68,7 @@
             this.Controls.Add(this.btnReturn);
             this.Name = "Ver_Cliente";
             this.Text = "Ver_Cliente";
+            this.Load += new System.EventHandler(this.Ver_Cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvClientes)).EndInit();
             this.ResumeLayout(false);
 

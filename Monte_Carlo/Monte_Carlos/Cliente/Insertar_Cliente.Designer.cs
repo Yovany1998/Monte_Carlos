@@ -28,97 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Codigo_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cood_Mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_reservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtInsertarCliente = new System.Windows.Forms.Button();
+            this.dvClientes = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox3
+            // txtApellido
             // 
-            this.textBox3.AllowDrop = true;
-            this.textBox3.Location = new System.Drawing.Point(221, 227);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 27);
-            this.textBox3.TabIndex = 42;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo_cliente,
-            this.Cood_Mesa,
-            this.Fecha,
-            this.Hora_reservacion});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 292);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(769, 202);
-            this.dataGridView1.TabIndex = 41;
-            // 
-            // Codigo_cliente
-            // 
-            this.Codigo_cliente.HeaderText = "Codigo del cliente";
-            this.Codigo_cliente.MinimumWidth = 6;
-            this.Codigo_cliente.Name = "Codigo_cliente";
-            this.Codigo_cliente.Width = 125;
-            // 
-            // Cood_Mesa
-            // 
-            this.Cood_Mesa.HeaderText = "Codigo de mesa";
-            this.Cood_Mesa.MinimumWidth = 6;
-            this.Cood_Mesa.Name = "Cood_Mesa";
-            this.Cood_Mesa.Width = 125;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
-            // 
-            // Hora_reservacion
-            // 
-            this.Hora_reservacion.HeaderText = "Hora";
-            this.Hora_reservacion.MinimumWidth = 6;
-            this.Hora_reservacion.Name = "Hora_reservacion";
-            this.Hora_reservacion.Width = 125;
+            this.txtApellido.AllowDrop = true;
+            this.txtApellido.Location = new System.Drawing.Point(166, 184);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Multiline = true;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(148, 23);
+            this.txtApellido.TabIndex = 42;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 227);
+            this.label3.Location = new System.Drawing.Point(45, 184);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 29);
+            this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Edad:";
+            this.label3.Text = "Apellido:";
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.AllowDrop = true;
-            this.textBox2.Location = new System.Drawing.Point(221, 170);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 28);
-            this.textBox2.TabIndex = 37;
+            this.txtNombre.AllowDrop = true;
+            this.txtNombre.Location = new System.Drawing.Point(166, 138);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Multiline = true;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(148, 24);
+            this.txtNombre.TabIndex = 37;
             // 
             // panel1
             // 
@@ -128,53 +84,29 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(769, 70);
+            this.panel1.Size = new System.Drawing.Size(577, 57);
             this.panel1.TabIndex = 36;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(276, 0);
+            this.label6.Location = new System.Drawing.Point(207, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(221, 70);
+            this.label6.Size = new System.Drawing.Size(166, 57);
             this.label6.TabIndex = 2;
             this.label6.Text = "Cliente";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 171);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 29);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Apellidos:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.AllowDrop = true;
-            this.textBox1.Location = new System.Drawing.Point(221, 111);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 28);
-            this.textBox1.TabIndex = 34;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 29);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Nombre:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Monte_Carlos.Properties.Resources.conjunto_ilustracion_logotipo_restaurante_vintage_23_2148470301;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(86, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -182,34 +114,85 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Monte_Carlos.Properties.Resources._64497;
-            this.pictureBox1.Location = new System.Drawing.Point(669, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(502, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 24);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Nombre:";
+            // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.AllowDrop = true;
+            this.txtIdCliente.Location = new System.Drawing.Point(166, 90);
+            this.txtIdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdCliente.Multiline = true;
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(148, 24);
+            this.txtIdCliente.TabIndex = 34;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(45, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 24);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Codigo Cliente:";
+            // 
+            // txtInsertarCliente
+            // 
+            this.txtInsertarCliente.Location = new System.Drawing.Point(370, 174);
+            this.txtInsertarCliente.Name = "txtInsertarCliente";
+            this.txtInsertarCliente.Size = new System.Drawing.Size(98, 39);
+            this.txtInsertarCliente.TabIndex = 43;
+            this.txtInsertarCliente.Text = "Insertar";
+            this.txtInsertarCliente.UseVisualStyleBackColor = true;
+            this.txtInsertarCliente.Click += new System.EventHandler(this.txtInsertarCliente_Click);
+            // 
+            // dvClientes
+            // 
+            this.dvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvClientes.Location = new System.Drawing.Point(32, 238);
+            this.dvClientes.Name = "dvClientes";
+            this.dvClientes.RowHeadersWidth = 51;
+            this.dvClientes.Size = new System.Drawing.Size(513, 188);
+            this.dvClientes.TabIndex = 44;
+            // 
             // Insertar_Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 494);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(577, 464);
+            this.Controls.Add(this.dvClientes);
+            this.Controls.Add(this.txtInsertarCliente);
+            this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Insertar_Cliente";
             this.Text = "Insertar_Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Insertar_Cliente_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,20 +200,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo_cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cood_Mesa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_reservacion;
+        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button txtInsertarCliente;
+        private System.Windows.Forms.DataGridView dvClientes;
     }
 }

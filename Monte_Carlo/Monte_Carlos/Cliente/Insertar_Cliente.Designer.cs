@@ -50,7 +50,7 @@
             // 
             this.txtApellido.AllowDrop = true;
             this.txtApellido.Location = new System.Drawing.Point(166, 184);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(148, 23);
@@ -70,7 +70,7 @@
             // 
             this.txtNombre.AllowDrop = true;
             this.txtNombre.Location = new System.Drawing.Point(166, 138);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 24);
@@ -84,7 +84,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 57);
             this.panel1.TabIndex = 36;
@@ -104,7 +104,7 @@
             // 
             this.pictureBox2.Image = global::Monte_Carlos.Properties.Resources.conjunto_ilustracion_logotipo_restaurante_vintage_23_2148470301;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(86, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +115,7 @@
             // 
             this.pictureBox1.Image = global::Monte_Carlos.Properties.Resources._64497;
             this.pictureBox1.Location = new System.Drawing.Point(502, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +137,7 @@
             // 
             this.txtIdCliente.AllowDrop = true;
             this.txtIdCliente.Location = new System.Drawing.Point(166, 90);
-            this.txtIdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdCliente.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdCliente.Multiline = true;
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(148, 24);
@@ -171,6 +171,7 @@
             this.dvClientes.RowHeadersWidth = 51;
             this.dvClientes.Size = new System.Drawing.Size(513, 188);
             this.dvClientes.TabIndex = 44;
+            this.dvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvClientes_CellContentClick);
             // 
             // Insertar_Cliente
             // 

@@ -64,5 +64,10 @@ namespace Monte_Carlos.Cliente
             dvClientes.DataSource = Datos;
             dvClientes.Refresh();
         }
+
+        private void dvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

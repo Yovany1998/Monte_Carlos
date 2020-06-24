@@ -155,32 +155,88 @@ LOCK TABLES `empleado` WRITE;
 /*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
 UNLOCK TABLES;
 
---
--- Table structure for table `factura`
---
 
-DROP TABLE IF EXISTS `factura`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `factura` (
-  `idFactura` int NOT NULL AUTO_INCREMENT,
-  `idCaja` int NOT NULL,
-  `fecha` datetime NULL default current_timestamp,
-  PRIMARY KEY (`idFactura`),
-  KEY `idCaja_idx` (`idCaja`),
-  CONSTRAINT `idCaja` FOREIGN KEY (`idCaja`) REFERENCES `factura` (`idFactura`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+-- -----------------------------------------------------
+-- Table `makeupbar`.`factura`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `makeupbar`.`Factura` (
+  `IdFactura` INT NOT NULL AUTO_INCREMENT,
+  `FechaActual` DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
+  `IdEmpleado` VARCHAR(15) NOT NULL,
+  `idCliente` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`IdFactura`),
+  INDEX `idEmpleadoFK_idx` (`IdEmpleado` ASC) VISIBLE,
+  INDEX `idClienteFK_idx` (`idCliente` ASC) VISIBLE,
+  CONSTRAINT `FK_Factura_idEmpeado_Empelado`
+    FOREIGN KEY (`IdEmpleado`)
+    REFERENCES `empleado` (`idEmpleado`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  CONSTRAINT `FK_Factura_idCliente_Cliente`
+    FOREIGN KEY (`idCliente`)
+    REFERENCES `cliente` (`IdCliente`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `factura`
---
 
-LOCK TABLES `factura` WRITE;
-/*!40000 ALTER TABLE `factura` DISABLE KEYS */;
-/*!40000 ALTER TABLE `factura` ENABLE KEYS */;
-UNLOCK TABLES;
+-- -----------------------------------------------------
+-- Table `makeupbar`.`Venta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Venta` (
+  `idVenta` INT NOT NULL AUTO_INCREMENT,
+  `idCliente` VARCHAR(15) NULL,
+  `idEmpleado` VARCHAR(15) NULL,
+  `Fecha` DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
+  INDEX `idVenta` USING BTREE (`idVenta`) VISIBLE,
+  PRIMARY KEY (`idVenta`),
+  UNIQUE INDEX `idVenta_UNIQUE` (`idVenta` ASC) VISIBLE,
+  INDEX `FK_Venta_idCliene_Cliente_idx` (`idCliente` ASC) VISIBLE,
+  INDEX `FK_Venta_idEmpleado_Empleado_idx` (`idEmpleado` ASC) VISIBLE,
+  CONSTRAINT `FK_Venta_idCliene_Cliente`
+    FOREIGN KEY (`idCliente`)
+    REFERENCES `cliente` (`IdCliente`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  CONSTRAINT `FK_Venta_idEmpleado_Empleado`
+    FOREIGN KEY (`idEmpleado`)
+    REFERENCES `makeupbar`.`empleado` (`idEmpleado`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE)
+ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `makeupbar`.`DetalleDeVenta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `DetalleDeFactura` (
+  `idDetalleDeFactura` INT NOT NULL AUTO_INCREMENT,
+  `idVenta` INT NULL,
+  `idFactura` INT NULL,
+  `idPedido` INT NULL,
+  `precio` FLOAT NULL,
+  `Cantidad` INT NULL,
+  PRIMARY KEY (`idDetalleDeFactura`),
+  INDEX `FK_DetalleDeFactura_idVenta_Venta_idx` (`idVenta` ASC) VISIBLE,
+  INDEX `FK_DetallaDeFactura_idFactura_Factura_idx` (`idFactura` ASC) VISIBLE,
+  INDEX `fk_DetalleDeFactura_idPedido_pedido_idx` (`idPedido` ASC) VISIBLE,
+  CONSTRAINT `FK_DetalleDeFactura_idVenta_Venta`
+    FOREIGN KEY (`idVenta`)
+    REFERENCES `Venta` (`idVenta`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK_DetallaDeFactura_idFactura_Factura`
+    FOREIGN KEY (`idFactura`)
+    REFERENCES `factura` (`IdFactura`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `FK_DetalleDeFactura_idPedido_Pedido`
+    FOREIGN KEY (`idPedido`)
+    REFERENCES `pedido` (`idPedido`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 --
 -- Table structure for table `mesa`
 --
@@ -247,7 +303,7 @@ CREATE TABLE `reservacion` (
   `idCliente` int NOT NULL,
   `idMesa` int NOT NULL,
   `fecha` datetime NOT NULL,
-  `hora` datetime NOT NULL,
+  `hora`  VARCHAR(8) NULL,
   PRIMARY KEY (`idReservacion`),
   KEY `idCliente_idx` (`idCliente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

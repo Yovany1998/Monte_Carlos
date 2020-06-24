@@ -14,8 +14,8 @@ namespace Monte_Carlos.Reservaciones
         private string idReservacion;
         private string idCliente;
         private string idMesa;
-        private DateTime dateFecha;
-        private int hora;
+        private DateTime fecha;
+        private string hora;
         private MySqlException error;
 
         public Reservacion()
@@ -23,24 +23,25 @@ namespace Monte_Carlos.Reservaciones
             idReservacion = "";
             idCliente = "";
             idMesa = "";
-            dateFecha = DateTime.Today;
+            fecha = DateTime.Today;
+            hora = "";
             conexion = new Conexion();
         }
 
-        public Reservacion(string i, string n, string c , DateTime f,int h)
+        public Reservacion(string i, string n, string c , DateTime f,string h)
         {
 
             idReservacion = i;
             idCliente = n;
             idMesa = c;
-            dateFecha = f;
+            fecha = f;
             hora = h;
             conexion = new Conexion();
         }
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO cliente (idReservacion,idCliente,idMesa,fecha,hora) VALUES ('{0}','{1}','{2}','{3}','{4}');", idReservacion, idCliente, idMesa, dateFecha,hora)))
+            if (conexion.IUD(string.Format("INSERT INTO reservacion (idCliente,idMesa,fecha,hora) VALUES ('{0}','{1}','{2}','{3}');", idCliente, idMesa, fecha.ToString("yyyy-MM-dd"), hora)))
             {
                 return true;
             }
@@ -63,7 +64,7 @@ namespace Monte_Carlos.Reservaciones
             }
         }
 
-        public string Idcliente
+        public string IdCliente
         {
             get
             {
@@ -87,19 +88,19 @@ namespace Monte_Carlos.Reservaciones
             }
         }
 
-        public DateTime DateFecha
+        public DateTime Fecha
         {
             get
             {
-                return dateFecha;
+                return fecha;
             }
             set
             {
-                dateFecha = value;
+                fecha = value.Date;
             }
         }
 
-        public int Hora
+        public String Hora
         {
             get
             {

@@ -12,7 +12,7 @@ namespace Monte_Carlos.Carta
         private Conexion conexion;
         private int idComida;
         private string nombre;
-        private float precio;
+        private double precio;
         private string descripcion;
         private MySqlException error;
 
@@ -20,24 +20,25 @@ namespace Monte_Carlos.Carta
         {
             idComida = 0;
             nombre = "";
-            precio = 0;
+            precio = 0.0;
             descripcion = "";
 
             conexion = new Conexion();
         }
 
-        public Comida(string i, string n, string c, string z)
+        public Comida(string i, double n, string z)
         {
 
-            nombre = n;
-            precio = 0;
+            nombre = i;
+            precio = n;
             descripcion = z;
             conexion = new Conexion();
         }
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO comida (nombre,precio,descripcion) VALUES ('{0}','{1}', '{2}');", nombre, precio, descripcion)))
+
+            if (conexion.IUD(string.Format("INSERT INTO comida (comida,precio,descripcion) VALUES ('{0}','{1}', '{2}');", nombre, precio, descripcion)))
             {
                 return true;
             }
@@ -62,7 +63,7 @@ namespace Monte_Carlos.Carta
             }
         }
 
-        public float Precio
+        public double Precio
         {
             get
             {

@@ -33,7 +33,7 @@ namespace Monte_Carlos.Carta
         private void button1_Click(object sender, EventArgs e)
         {
             comida.NombreComida = txtNombre.Text;
-            comida.Precio = Convert.ToInt32(txtprecio.Text);
+            comida.Precio = Convert.ToDouble(txtPrecio.Text);
             comida.Descripcion = txtDescripcion.Text;
 
             if (comida.Guardar())
@@ -50,14 +50,21 @@ namespace Monte_Carlos.Carta
         private void limpiar()
         {
             txtNombre.Text = "";
-            txtprecio.Text = "";
+            txtPrecio.Text = "";
             txtDescripcion.Text = "";
 
-            DataTable Datos = conexion.consulta(String.Format("SELECT idComida, nombre, precio, descripcion FROM comida;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT idComida, comida, precio, descripcion FROM comida;"));
             dvComida.DataSource = Datos;
             dvComida.Refresh();
 
 
+        }
+
+        private void Ingreso_Comida_Load(object sender, EventArgs e)
+        {
+            DataTable Datos = conexion.consulta(String.Format("SELECT idComida,comida, precio, descripcion FROM comida;"));
+            dvComida.DataSource = Datos;
+            dvComida.Refresh();
         }
     }
 }

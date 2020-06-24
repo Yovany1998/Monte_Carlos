@@ -30,10 +30,6 @@
         {
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dvComida = new System.Windows.Forms.DataGridView();
-            this.Nombre_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cood_Mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_reservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,7 +39,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtprecio = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvComida)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,64 +49,32 @@
             // txtDescripcion
             // 
             this.txtDescripcion.AllowDrop = true;
-            this.txtDescripcion.Location = new System.Drawing.Point(221, 229);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcion.Location = new System.Drawing.Point(166, 186);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(196, 72);
+            this.txtDescripcion.Size = new System.Drawing.Size(148, 59);
             this.txtDescripcion.TabIndex = 42;
             // 
             // dvComida
             // 
             this.dvComida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvComida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre_Cliente,
-            this.Cood_Mesa,
-            this.Fecha,
-            this.Hora_reservacion});
             this.dvComida.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dvComida.Location = new System.Drawing.Point(0, 336);
-            this.dvComida.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dvComida.Location = new System.Drawing.Point(0, 273);
+            this.dvComida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dvComida.Name = "dvComida";
             this.dvComida.RowHeadersWidth = 51;
             this.dvComida.RowTemplate.Height = 24;
-            this.dvComida.Size = new System.Drawing.Size(769, 202);
+            this.dvComida.Size = new System.Drawing.Size(577, 164);
             this.dvComida.TabIndex = 41;
-            // 
-            // Nombre_Cliente
-            // 
-            this.Nombre_Cliente.HeaderText = "Nombre";
-            this.Nombre_Cliente.MinimumWidth = 6;
-            this.Nombre_Cliente.Name = "Nombre_Cliente";
-            this.Nombre_Cliente.Width = 125;
-            // 
-            // Cood_Mesa
-            // 
-            this.Cood_Mesa.HeaderText = "Precio";
-            this.Cood_Mesa.MinimumWidth = 6;
-            this.Cood_Mesa.Name = "Cood_Mesa";
-            this.Cood_Mesa.Width = 125;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Tipo de producto";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
-            // 
-            // Hora_reservacion
-            // 
-            this.Hora_reservacion.HeaderText = "Descripción";
-            this.Hora_reservacion.MinimumWidth = 6;
-            this.Hora_reservacion.Name = "Hora_reservacion";
-            this.Hora_reservacion.Width = 125;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 229);
+            this.label3.Location = new System.Drawing.Point(45, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 30);
+            this.label3.Size = new System.Drawing.Size(94, 24);
             this.label3.TabIndex = 38;
             this.label3.Text = "Descripcion:";
             // 
@@ -122,17 +86,18 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(769, 70);
+            this.panel1.Size = new System.Drawing.Size(577, 57);
             this.panel1.TabIndex = 36;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(311, 0);
+            this.label6.Location = new System.Drawing.Point(233, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(221, 70);
+            this.label6.Size = new System.Drawing.Size(166, 57);
             this.label6.TabIndex = 2;
             this.label6.Text = "Comidas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,9 +106,9 @@
             // 
             this.pictureBox2.Image = global::Monte_Carlos.Properties.Resources.conjunto_ilustracion_logotipo_restaurante_vintage_23_2148470301;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(115, 70);
+            this.pictureBox2.Size = new System.Drawing.Size(86, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -151,10 +116,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Monte_Carlos.Properties.Resources._64497;
-            this.pictureBox1.Location = new System.Drawing.Point(669, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(502, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(75, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -163,57 +128,60 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 171);
+            this.label2.Location = new System.Drawing.Point(45, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 30);
+            this.label2.Size = new System.Drawing.Size(94, 24);
             this.label2.TabIndex = 35;
             this.label2.Text = "Precio:";
             // 
             // txtNombre
             // 
             this.txtNombre.AllowDrop = true;
-            this.txtNombre.Location = new System.Drawing.Point(221, 111);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Location = new System.Drawing.Point(166, 90);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(196, 29);
+            this.txtNombre.Size = new System.Drawing.Size(148, 24);
             this.txtNombre.TabIndex = 34;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 111);
+            this.label1.Location = new System.Drawing.Point(45, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 30);
+            this.label1.Size = new System.Drawing.Size(94, 24);
             this.label1.TabIndex = 33;
             this.label1.Text = "Nombre:";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(562, 253);
+            this.btnGuardar.Location = new System.Drawing.Point(422, 206);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(127, 48);
+            this.btnGuardar.Size = new System.Drawing.Size(95, 39);
             this.btnGuardar.TabIndex = 43;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtprecio
+            // txtPrecio
             // 
-            this.txtprecio.AllowDrop = true;
-            this.txtprecio.Location = new System.Drawing.Point(221, 171);
-            this.txtprecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtprecio.Multiline = true;
-            this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(196, 29);
-            this.txtprecio.TabIndex = 44;
+            this.txtPrecio.AllowDrop = true;
+            this.txtPrecio.Location = new System.Drawing.Point(166, 139);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Multiline = true;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(148, 24);
+            this.txtPrecio.TabIndex = 44;
             // 
             // Ingreso_Comida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 538);
-            this.Controls.Add(this.txtprecio);
+            this.ClientSize = new System.Drawing.Size(577, 437);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.dvComida);
@@ -222,9 +190,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Ingreso_Comida";
             this.Text = "Ingreso_Comida";
+            this.Load += new System.EventHandler(this.Ingreso_Comida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvComida)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -246,11 +215,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cood_Mesa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_reservacion;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtprecio;
+        private System.Windows.Forms.TextBox txtPrecio;
     }
 }

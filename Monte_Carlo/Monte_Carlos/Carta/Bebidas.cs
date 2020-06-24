@@ -1,4 +1,5 @@
 ﻿using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace Monte_Carlos.Carta
         private Conexion conexion;
         private int idBebida;
         private string nombre;
-        private float precio;
+        private double precio;
         private string descripcion;
         private MySqlException error;
 
@@ -19,17 +20,17 @@ namespace Monte_Carlos.Carta
         {
             idBebida = 0;
             nombre = "";
-            precio = 0;
+            precio = 0.0;
             descripcion = "";
 
             conexion = new Conexion();
         }
 
-        public Bebidas(string i, string n, string c, string z)
+        public Bebidas(string i, double n, string z)
         {
 
-            nombre = n;
-            precio = 0;
+            nombre = i;
+            precio = n;
             descripcion = z;
             conexion = new Conexion();
         }
@@ -61,7 +62,7 @@ namespace Monte_Carlos.Carta
             }
         }
 
-        public float Precio
+        public double Precio
         {
             get
             {

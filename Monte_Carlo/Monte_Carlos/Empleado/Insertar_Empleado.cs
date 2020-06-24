@@ -44,7 +44,7 @@ namespace Monte_Carlos.Empleado
             empleado.Cargo = txtcargo.Text;
             if (empleado.Guardar())
             {
-                MessageBox.Show("Registro guardado correctamente", "Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Registro guardado Correctamente", "Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

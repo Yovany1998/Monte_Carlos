@@ -210,6 +210,12 @@
     <Compile Include="Venta\Menu_Venta.Designer.cs">
       <DependentUpon>Menu_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Venta\Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\Pago.Designer.cs">
+      <DependentUpon>Pago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Venta\Ventas.cs" />
     <EmbeddedResource Include="Carta\Ingreso_Comida.resx">
       <DependentUpon>Ingreso_Comida.cs</DependentUpon>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Venta\Menu_Venta.resx">
       <DependentUpon>Menu_Venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Venta\Pago.resx">
+      <DependentUpon>Pago.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -155,3 +155,4 @@ C:\Users\Hernandez Garcia\Desktop\Monte carlos repositorio\Monte_Carlos\Monte_Ca
 C:\Users\Hernandez Garcia\Desktop\Monte carlos repositorio\Monte_Carlos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.csproj.CopyComplete
 C:\Users\Hernandez Garcia\Desktop\Monte carlos repositorio\Monte_Carlos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.exe
 C:\Users\Hernandez Garcia\Desktop\Monte carlos repositorio\Monte_Carlos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.pdb
+C:\Users\Hernandez Garcia\Desktop\Monte carlos repositorio\Monte_Carlos\Monte_Carlo\Monte_Carlos\obj\Debug\Monte_Carlos.Venta.Pago.resources

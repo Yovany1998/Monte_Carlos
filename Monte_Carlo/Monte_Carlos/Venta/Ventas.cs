@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Monte_Carlos.Venta
 {
@@ -16,7 +17,7 @@ namespace Monte_Carlos.Venta
         private string idCliente;
         private string idEmpleado;
         private DateTime fecha;
-        private int idProducto;
+        private int idPedido;
         private double precio;
         private int cantidades;
         private double total;
@@ -28,7 +29,7 @@ namespace Monte_Carlos.Venta
             idCliente = "";
             idEmpleado = "";
             fecha = DateTime.Today;
-            idProducto = 0;
+            idPedido = 0;
             precio = 0.0;
             cantidades = 0;
             total = 0.0;
@@ -39,7 +40,7 @@ namespace Monte_Carlos.Venta
             idCliente = a;
             idEmpleado = b;
             fecha = DateTime.Today;
-            idProducto = c;
+            idPedido = c;
             precio = d;
             cantidades = e;
             total = t;
@@ -115,15 +116,15 @@ namespace Monte_Carlos.Venta
                 fecha = value;
             }
         }
-        public int IdProducto
+        public int IdPedido
         {
             get
             {
-                return idProducto;
+                return idPedido;
             }
             set
             {
-                idProducto = value;
+                idPedido = value;
             }
         }
         public double Precio
@@ -159,7 +160,7 @@ namespace Monte_Carlos.Venta
         {
 
             /*Inserta datos en la tabla de detalle de venta */
-            if (conexion.IUD(string.Format("insert into DetalleDeVenta(idVenta,idFactura,idProducto,precio,Cantidad,Descuento ,Total) value('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", idVenta, idFactura, idProducto, precio, cantidades, total)))
+            if (conexion.IUD(string.Format("insert into DetalleDeFactura(idVenta,idFactura,idPedido,precio,Cantidad,Total) value('{0}','{1}','{2}','{3}','{4}','{5}')", idVenta, idFactura, idPedido, precio, cantidades, total)))
             {
                 return true;
             }

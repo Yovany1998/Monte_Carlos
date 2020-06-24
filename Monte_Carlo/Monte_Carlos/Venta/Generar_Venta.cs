@@ -57,7 +57,7 @@ namespace Monte_Carlos.Venta
 
                 venta.IdVenta = Convert.ToInt32(txtIdVenta.Text);
                 venta.IdFactura = Convert.ToInt32(txtIdFactura.Text);
-                venta.IdProducto = Convert.ToInt32(txtIdPedido.Text);
+                venta.IdPedido= Convert.ToInt32(txtIdPedido.Text);
                 venta.Precio = Convert.ToDouble(txtPrecio.Text);
                 venta.Cantidades = Convert.ToInt32(txtCantidad.Text);
                 venta.Total = Convert.ToDouble(subventa);
@@ -66,8 +66,8 @@ namespace Monte_Carlos.Venta
                 {
                     MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     venta.IdVenta = Convert.ToInt32(txtIdVenta.Text);
-                    Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeVenta where idVenta = {0}", venta.IdVenta)).Rows[0][0].ToString());
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idVenta = {0};", venta.IdVenta));
+                    Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeFactura where idVenta = {0}", venta.IdVenta)).Rows[0][0].ToString());
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idFactura = {0};", venta.IdVenta));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }
@@ -156,7 +156,7 @@ namespace Monte_Carlos.Venta
                 limpiar();
                 limpiardetalle();
 
-                DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idFactura = {0};", venta.IdVenta));
+                DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idFactura = {0};", venta.IdVenta));
                 dgvVenta.DataSource = Datos;
                 dgvVenta.Refresh();
             }
@@ -170,6 +170,39 @@ namespace Monte_Carlos.Venta
             this.Hide();
             Pago ventana = new Pago();
             ventana.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ValidarVenta() == true)
+            {
+                venta.IdCliente = (Convert.ToString(txtCliente.Text));
+                venta.IdEmpleado = (Convert.ToString(txtEmpleado.Text));
+                venta.Fecha = DateTime.Today;
+
+
+
+                if (venta.Venta())
+                {
+                    txtIdVenta.Text = Convert.ToString(venta.IdVenta);
+                    txtIdFactura.Text = Convert.ToString(venta.IdFactura);
+
+                    MessageBox.Show("Registro guardado correctamente ", "venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Error\n{0}", venta.Error.ToString()), "Venta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("Se cancelo la edición");
+            }
+
         }
     }
 }

@@ -49,6 +49,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.Label();
             this.dgvVenta = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,7 +234,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(662, 104);
+            this.label10.Location = new System.Drawing.Point(710, 104);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 36;
@@ -244,7 +245,7 @@
             this.Total.AutoSize = true;
             this.Total.BackColor = System.Drawing.Color.Black;
             this.Total.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Total.Location = new System.Drawing.Point(665, 130);
+            this.Total.Location = new System.Drawing.Point(713, 130);
             this.Total.Name = "Total";
             this.Total.Size = new System.Drawing.Size(22, 13);
             this.Total.TabIndex = 34;
@@ -258,11 +259,23 @@
             this.dgvVenta.Size = new System.Drawing.Size(615, 107);
             this.dgvVenta.TabIndex = 43;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(630, 101);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 23);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Venta";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Generar_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvVenta);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -315,5 +328,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label Total;
         private System.Windows.Forms.DataGridView dgvVenta;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -34,9 +34,10 @@ namespace Monte_Carlos.Venta
 
         private void Pago_Load(object sender, EventArgs e)
         {
-            int Id = 0;
-
-            DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idProducto as 'Producto',precio as 'Precio',Cantidad,Descuento,Total FROM DetalleDeVenta  where idVenta = {0};", Id));
+            string id;
+            id = Convert.ToString(conexion.consulta(string.Format("SELECT Max(idVenta) from DetalleDeFactura")).Rows[0][0].ToString());
+            Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeFactura where idVenta = {0}", id)).Rows[0][0].ToString());
+            DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idFactura = {0};",id));
             dgvVenta.DataSource = Datos;
             dgvVenta.Refresh();
         }

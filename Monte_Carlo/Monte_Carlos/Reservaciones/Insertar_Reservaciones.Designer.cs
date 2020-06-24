@@ -60,7 +60,7 @@
             // 
             this.txtCodigo.AllowDrop = true;
             this.txtCodigo.Location = new System.Drawing.Point(189, 97);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigo.Multiline = true;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 24);
@@ -85,7 +85,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 57);
             this.panel1.TabIndex = 11;
@@ -104,7 +104,7 @@
             // 
             this.pictureBox2.Image = global::Monte_Carlos.Properties.Resources.conjunto_ilustracion_logotipo_restaurante_vintage_23_2148470301;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(86, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,19 +115,20 @@
             // 
             this.pictureBox1.Image = global::Monte_Carlos.Properties.Resources._64497;
             this.pictureBox1.Location = new System.Drawing.Point(502, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.BackgroundImageLayoutChanged += new System.EventHandler(this.btnReturn_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // txtMesa
             // 
             this.txtMesa.AllowDrop = true;
             this.txtMesa.Location = new System.Drawing.Point(189, 144);
-            this.txtMesa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMesa.Margin = new System.Windows.Forms.Padding(2);
             this.txtMesa.Multiline = true;
             this.txtMesa.Name = "txtMesa";
             this.txtMesa.Size = new System.Drawing.Size(132, 24);
@@ -146,7 +147,7 @@
             // dateFecha
             // 
             this.dateFecha.Location = new System.Drawing.Point(189, 189);
-            this.dateFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateFecha.Margin = new System.Windows.Forms.Padding(2);
             this.dateFecha.Name = "dateFecha";
             this.dateFecha.Size = new System.Drawing.Size(132, 20);
             this.dateFecha.TabIndex = 17;
@@ -155,7 +156,7 @@
             // 
             this.txtHora.AllowDrop = true;
             this.txtHora.Location = new System.Drawing.Point(189, 225);
-            this.txtHora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHora.Margin = new System.Windows.Forms.Padding(2);
             this.txtHora.Multiline = true;
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(132, 24);

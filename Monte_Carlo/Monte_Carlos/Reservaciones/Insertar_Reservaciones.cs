@@ -67,5 +67,12 @@ namespace Monte_Carlos.Reservaciones
            
           
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu_Reservaciones ventana = new Menu_Reservaciones();
+            ventana.Show();
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace Monte_Carlos.Carta
 
         public Boolean Guardar()
         {
-            if (conexion.IUD(string.Format("INSERT INTO bebida (nombre,precio,descripcion) VALUES ('{0}','{1}', '{2}',);", nombre, precio, descripcion)))
+            if (conexion.IUD(string.Format("INSERT INTO bebida (nombre,precio,descripcion) VALUES ('{0}','{1}', '{2}');", nombre, precio, descripcion)))
             {
                 return true;
             }

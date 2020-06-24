@@ -30,10 +30,6 @@
         {
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.dvBebidas = new System.Windows.Forms.DataGridView();
-            this.Nombre_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cood_Mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_reservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.txtprecio = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,11 +59,6 @@
             // dvBebidas
             // 
             this.dvBebidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvBebidas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre_Cliente,
-            this.Cood_Mesa,
-            this.Fecha,
-            this.Hora_reservacion});
             this.dvBebidas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dvBebidas.Location = new System.Drawing.Point(0, 336);
             this.dvBebidas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -76,34 +67,6 @@
             this.dvBebidas.RowTemplate.Height = 24;
             this.dvBebidas.Size = new System.Drawing.Size(769, 202);
             this.dvBebidas.TabIndex = 49;
-            // 
-            // Nombre_Cliente
-            // 
-            this.Nombre_Cliente.HeaderText = "Nombre";
-            this.Nombre_Cliente.MinimumWidth = 6;
-            this.Nombre_Cliente.Name = "Nombre_Cliente";
-            this.Nombre_Cliente.Width = 125;
-            // 
-            // Cood_Mesa
-            // 
-            this.Cood_Mesa.HeaderText = "Precio";
-            this.Cood_Mesa.MinimumWidth = 6;
-            this.Cood_Mesa.Name = "Cood_Mesa";
-            this.Cood_Mesa.Width = 125;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Tipo de producto";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.Width = 125;
-            // 
-            // Hora_reservacion
-            // 
-            this.Hora_reservacion.HeaderText = "Descripción";
-            this.Hora_reservacion.MinimumWidth = 6;
-            this.Hora_reservacion.Name = "Hora_reservacion";
-            this.Hora_reservacion.Width = 125;
             // 
             // label3
             // 
@@ -144,7 +107,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(221, 70);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Comidas";
+            this.label6.Text = "Bebidas";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -238,10 +201,6 @@
 
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.DataGridView dvBebidas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cood_Mesa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_reservacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Panel panel1;

@@ -33,7 +33,7 @@ namespace Monte_Carlos.Carta
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             bebidas.NombreBebida = txtNombre.Text;
-            bebidas.Precio = Convert.ToInt32(txtprecio.Text);
+            bebidas.Precio = Convert.ToDouble(txtprecio.Text);
             bebidas.Descripcion = txtDescripcion.Text;
 
             if (bebidas.Guardar())

@@ -66,5 +66,10 @@ namespace Monte_Carlos.Empleado
 
 
         }
+
+        private void dvempleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Carta\Bebidas.cs" />
+    <Compile Include="Carta\Comida.cs" />
     <Compile Include="Carta\Ingreso_Comida.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +331,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\64497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

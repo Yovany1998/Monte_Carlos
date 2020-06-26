@@ -38,6 +38,7 @@ namespace Monte_Carlos.Empleado
 
         private void btninsertar_Click(object sender, EventArgs e)
         {
+            empleado.IdEmpleado = txtid.Text;
             empleado.NombreEmpleado = txtnombre.Text;
             empleado.ApellidoEmpleado = txtapellido.Text;
             empleado.Edad = Convert.ToInt32(txtedad.Text);
@@ -55,6 +56,7 @@ namespace Monte_Carlos.Empleado
 
         private void limpiar()
         {
+            txtid.Text = "";
             txtnombre.Text = "";
             txtapellido.Text = "";
             txtedad.Text = "";

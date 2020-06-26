@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.btnReturn = new System.Windows.Forms.Button();
+            this.dgvFactura = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -48,14 +50,26 @@
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // dgvFactura
+            // 
+            this.dgvFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFactura.Location = new System.Drawing.Point(117, 55);
+            this.dgvFactura.Name = "dgvFactura";
+            this.dgvFactura.Size = new System.Drawing.Size(615, 306);
+            this.dgvFactura.TabIndex = 44;
+            this.dgvFactura.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFactura_CellContentClick);
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvFactura);
             this.Controls.Add(this.btnReturn);
             this.Name = "Factura";
             this.Text = "Factura";
+            this.Load += new System.EventHandler(this.Factura_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFactura)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -63,5 +77,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DataGridView dgvFactura;
     }
 }

@@ -1,6 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
---
--- Host: 127.0.0.1    Database: ventas_comedor
+
 -- ------------------------------------------------------
 -- Server version	8.0.19
 
@@ -159,7 +157,7 @@ UNLOCK TABLES;
 -- -----------------------------------------------------
 -- Table `makeupbar`.`factura`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `makeupbar`.`Factura` (
+CREATE TABLE IF NOT EXISTS `Factura` (
   `IdFactura` INT NOT NULL AUTO_INCREMENT,
   `FechaActual` DATETIME NULL DEFAULT CURRENT_TIMESTAMP(),
   `IdEmpleado` VARCHAR(15) NOT NULL,
@@ -202,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `Venta` (
     ON UPDATE CASCADE,
   CONSTRAINT `FK_Venta_idEmpleado_Empleado`
     FOREIGN KEY (`idEmpleado`)
-    REFERENCES `makeupbar`.`empleado` (`idEmpleado`)
+    REFERENCES `empleado` (`idEmpleado`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
@@ -217,6 +215,8 @@ CREATE TABLE IF NOT EXISTS `DetalleDeFactura` (
   `idPedido` INT NULL,
   `precio` FLOAT NULL,
   `Cantidad` INT NULL,
+  `Total` float NULL,
+  
   PRIMARY KEY (`idDetalleDeFactura`),
   INDEX `FK_DetalleDeFactura_idVenta_Venta_idx` (`idVenta` ASC) VISIBLE,
   INDEX `FK_DetallaDeFactura_idFactura_Factura_idx` (`idFactura` ASC) VISIBLE,

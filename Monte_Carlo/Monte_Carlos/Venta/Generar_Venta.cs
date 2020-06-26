@@ -14,11 +14,14 @@ namespace Monte_Carlos.Venta
     {
         Conexion conexion;
         private Ventas venta;
+        //private Validar validacion;
         public Generar_Venta()
         {
             InitializeComponent();
             venta = new Ventas();
+            //validacion = new Validar();
             conexion = new Conexion();
+            
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -67,7 +70,7 @@ namespace Monte_Carlos.Venta
                     MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     venta.IdVenta = Convert.ToInt32(txtIdVenta.Text);
                     Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeFactura where idVenta = {0}", venta.IdVenta)).Rows[0][0].ToString());
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idFactura = {0};", venta.IdVenta));
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idVenta = {0};", venta.IdVenta));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }
@@ -86,6 +89,8 @@ namespace Monte_Carlos.Venta
 
         private Boolean ValidarVenta()
         {
+       
+           
             Boolean validarVenta = true;
             if (txtCliente.Text == "")
             {
@@ -167,9 +172,9 @@ namespace Monte_Carlos.Venta
             limpiar();
             limpiardetalle();
 
-            this.Hide();
-            Pago ventana = new Pago();
-            ventana.Show();
+            //DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idVenta = {0};", venta.IdVenta));
+            dgvVenta.DataSource = " ";
+            dgvVenta.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -203,6 +208,26 @@ namespace Monte_Carlos.Venta
                 MessageBox.Show("Se cancelo la edición");
             }
 
+        }
+
+        private void Generar_Venta_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCliente_TextChanged(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void txtCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+        private void txtEmpleado_TextChanged(object sender, EventArgs e)
+        {
+        
         }
     }
 }

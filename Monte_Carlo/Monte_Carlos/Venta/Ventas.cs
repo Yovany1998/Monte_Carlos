@@ -199,7 +199,7 @@ namespace Monte_Carlos.Venta
             public Boolean Eliminar()
             {
 
-                if (conexion.IUD(string.Format("DELETE FROM DetalleDeVenta WHERE idVenta='{0}'", IdVenta)))
+                if (conexion.IUD(string.Format("DELETE FROM DetalleDeFactura WHERE idVenta='{0}'", IdVenta)))
                 {
 
                 }

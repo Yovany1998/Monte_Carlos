@@ -26,7 +26,7 @@ namespace Monte_Carlos
             bd = "ventas_comedor";
             servidor = "127.0.0.1";
             usuario = "root";
-            pass = "popito19955";
+            pass = "Luis1999";
 
             conexion = new MySqlConnection();
         }

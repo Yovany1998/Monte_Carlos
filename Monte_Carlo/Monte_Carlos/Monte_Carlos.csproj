@@ -194,6 +194,7 @@
     <Compile Include="Servicio\Ver_Pedido.Designer.cs">
       <DependentUpon>Ver_Pedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validar.cs" />
     <Compile Include="Venta\Factura.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +219,7 @@
     <Compile Include="Venta\Pago.Designer.cs">
       <DependentUpon>Pago.cs</DependentUpon>
     </Compile>
+    <Compile Include="Venta\Validacion.cs" />
     <Compile Include="Venta\Ventas.cs" />
     <EmbeddedResource Include="Carta\Ingreso_Comida.resx">
       <DependentUpon>Ingreso_Comida.cs</DependentUpon>

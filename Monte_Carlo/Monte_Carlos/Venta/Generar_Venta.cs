@@ -217,17 +217,53 @@ namespace Monte_Carlos.Venta
 
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
-
+           
             
         }
 
         private void txtCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            Validacion.soloNumeros(e);
         }
         private void txtEmpleado_TextChanged(object sender, EventArgs e)
         {
         
+        }
+
+        private void txtIdVenta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdFactura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.soloNumeros(e);
+        }
+
+        private void txtIdPedido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdPedido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.soloNumeros(e);
+        }
+
+        private void txtEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.soloNumeros(e);
+
+        }
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.numerosConDecimales(e);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validacion.soloNumeros(e);
         }
     }
 }

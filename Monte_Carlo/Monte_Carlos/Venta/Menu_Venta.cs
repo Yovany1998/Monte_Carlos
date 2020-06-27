@@ -38,5 +38,9 @@ namespace Monte_Carlos.Venta
             ventana.Show();
         }
 
+        private void btnReturn_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

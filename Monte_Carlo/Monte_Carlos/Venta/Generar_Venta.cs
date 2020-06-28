@@ -37,7 +37,7 @@ namespace Monte_Carlos.Venta
             txtEmpleado.Text = "";
             txtIdVenta.Text = "";
             txtIdFactura.Text = "";
-            txtIdPedido.Text = "";
+            cmbComida.SelectedIndex = -1;
             txtPrecio.Text = "";
             txtCantidad.Text = "";
             Total.Text = "";
@@ -45,7 +45,8 @@ namespace Monte_Carlos.Venta
 
         private void limpiardetalle()
         {
-            txtIdPedido.Text = "";
+            //txtIdPedido.Text = "";
+            cmbComida.SelectedIndex = -1;
             txtPrecio.Text = "";
             txtCantidad.Text = "";
         }
@@ -60,7 +61,9 @@ namespace Monte_Carlos.Venta
 
                 venta.IdVenta = Convert.ToInt32(txtIdVenta.Text);
                 venta.IdFactura = Convert.ToInt32(txtIdFactura.Text);
-                venta.IdPedido= Convert.ToInt32(txtIdPedido.Text);
+                //venta.IdComida= Convert.ToInt32(txtIdPedido.Text);
+                venta.IdComida = Convert.ToInt16(cmbComida.SelectedValue.ToString());
+
                 venta.Precio = Convert.ToDouble(txtPrecio.Text);
                 venta.Cantidades = Convert.ToInt32(txtCantidad.Text);
                 venta.Total = Convert.ToDouble(subventa);
@@ -70,7 +73,7 @@ namespace Monte_Carlos.Venta
                     MessageBox.Show("Registro guardado correctamente", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     venta.IdVenta = Convert.ToInt32(txtIdVenta.Text);
                     Total.Text = Convert.ToString(conexion.consulta(string.Format("SELECT SUM(Total) from DetalleDeFactura where idVenta = {0}", venta.IdVenta)).Rows[0][0].ToString());
-                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idVenta = {0};", venta.IdVenta));
+                    DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idComida as 'Comida',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idVenta = {0};", venta.IdVenta));
                     dgvVenta.DataSource = Datos;
                     dgvVenta.Refresh();
                 }
@@ -81,7 +84,7 @@ namespace Monte_Carlos.Venta
             }
             else
             {
-                MessageBox.Show("Se cancelo la edición");
+                MessageBox.Show("Se cancelo el ingreso");
             }
             limpiardetalle();
         }
@@ -128,12 +131,19 @@ namespace Monte_Carlos.Venta
                 txtIdFactura.Focus();
                 validar = false;
             }
-            else if (txtIdPedido.Text == "")
+            /*else if (txtIdPedido.Text == "")
             {
                 MessageBox.Show("Ingrese el codigo del pedido", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtIdPedido.Focus();
                 validar = false;
+            }*/
+            else if (cmbComida.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleccione un producto", "Comida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbComida.Focus();
+                validar = false;
             }
+            
             else if (txtPrecio.Text == "")
             {
                 MessageBox.Show("Ingrese el precio del producto", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -161,7 +171,7 @@ namespace Monte_Carlos.Venta
                 limpiar();
                 limpiardetalle();
 
-                DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idPedido as 'Pedido',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idFactura = {0};", venta.IdVenta));
+                DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idComida as 'Comida',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idFactura = {0};", venta.IdVenta));
                 dgvVenta.DataSource = Datos;
                 dgvVenta.Refresh();
             }
@@ -212,8 +222,23 @@ namespace Monte_Carlos.Venta
 
         private void Generar_Venta_Load(object sender, EventArgs e)
         {
-
+            llenarCategoria();
         }
+
+        private void llenarCategoria()
+        {
+            DataTable comida = new DataTable();
+            Conexion nuevo = new Conexion();
+            comida = nuevo.consulta(string.Format("SELECT * FROM ventas_comedor.comida"));
+            cmbComida.DataSource = null;
+            cmbComida.Items.Clear();
+            cmbComida.ValueMember = comida.Columns["idComida"].ColumnName;
+            cmbComida.DisplayMember = comida.Columns["comida"].ColumnName;
+            cmbComida.DataSource = comida;
+            cmbComida.SelectedIndex = -1;
+            cmbComida.Text = "Selecciona una opcion";
+        }
+
 
         private void txtCliente_TextChanged(object sender, EventArgs e)
         {
@@ -264,6 +289,26 @@ namespace Monte_Carlos.Venta
         private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             Validacion.soloNumeros(e);
+        }
+
+        private void cmbComida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbComida_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void cmbComida_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void cmbComida_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

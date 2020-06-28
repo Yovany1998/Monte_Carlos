@@ -17,7 +17,7 @@ namespace Monte_Carlos.Venta
         private string idCliente;
         private string idEmpleado;
         private DateTime fecha;
-        private int idPedido;
+        private int idComida;
         private double precio;
         private int cantidades;
         private double total;
@@ -29,7 +29,7 @@ namespace Monte_Carlos.Venta
             idCliente = "";
             idEmpleado = "";
             fecha = DateTime.Today;
-            idPedido = 0;
+            idComida = 0;
             precio = 0.0;
             cantidades = 0;
             total = 0.0;
@@ -40,7 +40,7 @@ namespace Monte_Carlos.Venta
             idCliente = a;
             idEmpleado = b;
             fecha = DateTime.Today;
-            idPedido = c;
+            idComida = c;
             precio = d;
             cantidades = e;
             total = t;
@@ -116,15 +116,15 @@ namespace Monte_Carlos.Venta
                 fecha = value;
             }
         }
-        public int IdPedido
+        public int IdComida
         {
             get
             {
-                return idPedido;
+                return idComida;
             }
             set
             {
-                idPedido = value;
+                idComida = value;
             }
         }
         public double Precio
@@ -132,6 +132,7 @@ namespace Monte_Carlos.Venta
             get
             {
                 return precio;
+
             }
             set
             {
@@ -160,7 +161,7 @@ namespace Monte_Carlos.Venta
         {
 
             /*Inserta datos en la tabla de detalle de venta */
-            if (conexion.IUD(string.Format("insert into DetalleDeFactura(idVenta,idFactura,idPedido,precio,Cantidad,Total) value('{0}','{1}','{2}','{3}','{4}','{5}')", idVenta, idFactura, idPedido, precio, cantidades, total)))
+            if (conexion.IUD(string.Format("insert into DetalleDeFactura(idVenta,idFactura,idComida,precio,Cantidad,Total) value('{0}','{1}','{2}','{3}','{4}','{5}')", idVenta, idFactura, idComida, precio, cantidades, total)))
             {
                 return true;
             }

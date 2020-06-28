@@ -32,8 +32,6 @@
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnInsertar = new System.Windows.Forms.Button();
             this.txtCliente = new System.Windows.Forms.TextBox();
-            this.txtIdFactura = new System.Windows.Forms.TextBox();
-            this.txtIdPedido = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtEmpleado = new System.Windows.Forms.TextBox();
@@ -53,6 +51,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtIdFactura = new System.Windows.Forms.TextBox();
+            this.cmbComida = new System.Windows.Forms.ComboBox();
+            this.txtIdPedido = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenta)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -107,25 +108,6 @@
             this.txtCliente.TabIndex = 0;
             this.txtCliente.TextChanged += new System.EventHandler(this.txtCliente_TextChanged);
             this.txtCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCliente_KeyPress);
-            // 
-            // txtIdFactura
-            // 
-            this.txtIdFactura.Location = new System.Drawing.Point(157, 243);
-            this.txtIdFactura.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdFactura.Name = "txtIdFactura";
-            this.txtIdFactura.Size = new System.Drawing.Size(132, 22);
-            this.txtIdFactura.TabIndex = 19;
-            this.txtIdFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdFactura_KeyPress);
-            // 
-            // txtIdPedido
-            // 
-            this.txtIdPedido.Location = new System.Drawing.Point(157, 294);
-            this.txtIdPedido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(132, 22);
-            this.txtIdPedido.TabIndex = 3;
-            this.txtIdPedido.TextChanged += new System.EventHandler(this.txtIdPedido_TextChanged);
-            this.txtIdPedido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdPedido_KeyPress);
             // 
             // txtCantidad
             // 
@@ -347,12 +329,43 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // txtIdFactura
+            // 
+            this.txtIdFactura.Location = new System.Drawing.Point(157, 243);
+            this.txtIdFactura.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdFactura.Name = "txtIdFactura";
+            this.txtIdFactura.Size = new System.Drawing.Size(132, 22);
+            this.txtIdFactura.TabIndex = 19;
+            this.txtIdFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdFactura_KeyPress);
+            // 
+            // cmbComida
+            // 
+            this.cmbComida.FormattingEnabled = true;
+            this.cmbComida.Location = new System.Drawing.Point(157, 291);
+            this.cmbComida.Name = "cmbComida";
+            this.cmbComida.Size = new System.Drawing.Size(132, 24);
+            this.cmbComida.TabIndex = 45;
+            this.cmbComida.SelectedIndexChanged += new System.EventHandler(this.cmbComida_SelectedIndexChanged);
+            this.cmbComida.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbComida_KeyDown);
+            this.cmbComida.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbComida_KeyPress);
+            this.cmbComida.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbComida_MouseDown);
+            // 
+            // txtIdPedido
+            // 
+            this.txtIdPedido.Location = new System.Drawing.Point(358, 293);
+            this.txtIdPedido.Name = "txtIdPedido";
+            this.txtIdPedido.Size = new System.Drawing.Size(144, 22);
+            this.txtIdPedido.TabIndex = 46;
+            this.txtIdPedido.Visible = false;
+            // 
             // Generar_Venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(872, 609);
+            this.Controls.Add(this.txtIdPedido);
+            this.Controls.Add(this.cmbComida);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvVenta);
@@ -369,7 +382,6 @@
             this.Controls.Add(this.txtEmpleado);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.txtIdPedido);
             this.Controls.Add(this.txtIdFactura);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.BtnInsertar);
@@ -393,8 +405,6 @@
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnInsertar;
         private System.Windows.Forms.TextBox txtCliente;
-        private System.Windows.Forms.TextBox txtIdFactura;
-        private System.Windows.Forms.TextBox txtIdPedido;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtEmpleado;
@@ -414,5 +424,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtIdFactura;
+        private System.Windows.Forms.ComboBox cmbComida;
+        private System.Windows.Forms.TextBox txtIdPedido;
     }
 }

@@ -212,7 +212,7 @@ CREATE TABLE IF NOT EXISTS `DetalleDeFactura` (
   `idDetalleDeFactura` INT NOT NULL AUTO_INCREMENT,
   `idVenta` INT NULL,
   `idFactura` INT NULL,
-  `idPedido` INT NULL,
+  `idComida` INT NULL,
   `precio` FLOAT NULL,
   `Cantidad` INT NULL,
   `Total` float NULL,
@@ -220,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `DetalleDeFactura` (
   PRIMARY KEY (`idDetalleDeFactura`),
   INDEX `FK_DetalleDeFactura_idVenta_Venta_idx` (`idVenta` ASC) VISIBLE,
   INDEX `FK_DetallaDeFactura_idFactura_Factura_idx` (`idFactura` ASC) VISIBLE,
-  INDEX `fk_DetalleDeFactura_idPedido_pedido_idx` (`idPedido` ASC) VISIBLE,
+  INDEX `fk_DetalleDeFactura_idComida_comida_idx` (`idComida` ASC) VISIBLE,
   CONSTRAINT `FK_DetalleDeFactura_idVenta_Venta`
     FOREIGN KEY (`idVenta`)
     REFERENCES `Venta` (`idVenta`)
@@ -231,9 +231,9 @@ CREATE TABLE IF NOT EXISTS `DetalleDeFactura` (
     REFERENCES `factura` (`IdFactura`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `FK_DetalleDeFactura_idPedido_Pedido`
-    FOREIGN KEY (`idPedido`)
-    REFERENCES `pedido` (`idPedido`)
+  CONSTRAINT `FK_DetalleDeFactura_idComida_Comida`
+    FOREIGN KEY (`idComida`)
+    REFERENCES `comida` (`idComida`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

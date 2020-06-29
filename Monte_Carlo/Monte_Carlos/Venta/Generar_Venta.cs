@@ -62,7 +62,7 @@ namespace Monte_Carlos.Venta
                 venta.IdVenta = Convert.ToInt32(txtIdVenta.Text);
                 venta.IdFactura = Convert.ToInt32(txtIdFactura.Text);
                 //venta.IdComida= Convert.ToInt32(txtIdPedido.Text);
-                venta.IdComida = Convert.ToInt16(cmbComida.SelectedValue.ToString());
+                venta.IdComida = Convert.ToInt32(cmbComida.SelectedValue.ToString());
 
                 venta.Precio = Convert.ToDouble(txtPrecio.Text);
                 venta.Cantidades = Convert.ToInt32(txtCantidad.Text);
@@ -150,10 +150,22 @@ namespace Monte_Carlos.Venta
                 txtPrecio.Focus();
                 validar = false;
             }
+            else if (Convert.ToDouble(txtPrecio.Text) == 0)
+            {
+                MessageBox.Show("Ingrese un precio mayor a 0", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPrecio.Focus();
+                validar = false;
+            }
             else if (txtCantidad.Text == "")
             {
                 MessageBox.Show("Ingrese la cantidad", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtCantidad.Focus();
+                validar = false;
+            }
+            else if (Convert.ToInt32(txtCantidad.Text) == 0)
+            {
+                MessageBox.Show("Ingrese una cantidad mayor a 0", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPrecio.Focus();
                 validar = false;
             }
             else

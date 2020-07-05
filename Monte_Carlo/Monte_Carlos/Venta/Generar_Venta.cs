@@ -12,6 +12,9 @@ namespace Monte_Carlos.Venta
 {
     public partial class Generar_Venta : Form
     {
+
+        private int contador;
+
         Conexion conexion;
         private Ventas venta;
         //private Validar validacion;
@@ -45,7 +48,7 @@ namespace Monte_Carlos.Venta
 
         private void limpiardetalle()
         {
-            //txtIdPedido.Text = "";
+            txtIdPedido.Text = "";
             cmbComida.SelectedIndex = -1;
             txtPrecio.Text = "";
             txtCantidad.Text = "";
@@ -55,6 +58,7 @@ namespace Monte_Carlos.Venta
         {
             if (Validar() == true)
             {
+                contador = 1;
                 double subventa;
                 subventa = (Convert.ToDouble(txtPrecio.Text) * Convert.ToDouble(txtCantidad.Text));
 
@@ -245,7 +249,7 @@ namespace Monte_Carlos.Venta
             cmbComida.DataSource = null;
             cmbComida.Items.Clear();
             cmbComida.ValueMember = comida.Columns["idComida"].ColumnName;
-            cmbComida.DisplayMember = comida.Columns["comida"].ColumnName;
+            cmbComida.DisplayMember = comida.Columns["idComida"].ColumnName;
             cmbComida.DataSource = comida;
             cmbComida.SelectedIndex = -1;
             cmbComida.Text = "Selecciona una opcion";
@@ -305,7 +309,23 @@ namespace Monte_Carlos.Venta
 
         private void cmbComida_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            contador = contador + 1;
+
+
+            if (contador>2)
+            {
+                // string ud;
+                //ud = cmbComida.Text;
+                //txtPrecio.Text = cmbComida.Text;
+                // txtPrecio.Text = conexion.consulta(string.Format("SELECT precio FROM ventas_comedor.comida where  {0};", ud)).Rows[0][0].ToString();
+      
+             
+                txtIdPedido.Text = (Convert.ToString(conexion.consulta(string.Format("SELECT comida from comida where idComida = {0};", cmbComida.Text)).Rows[0][0].ToString()));
+                txtPrecio.Text = Convert.ToString(conexion.consulta(string.Format("SELECT precio from comida where idComida = {0};", cmbComida.Text)).Rows[0][0].ToString());
+          
+
+            }
+
         }
 
         private void cmbComida_MouseDown(object sender, MouseEventArgs e)

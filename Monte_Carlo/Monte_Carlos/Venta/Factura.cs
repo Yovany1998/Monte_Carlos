@@ -34,7 +34,7 @@ namespace Monte_Carlos.Venta
 
         private void Factura_Load(object sender, EventArgs e)
         {
-            DataTable Datos = conexion.consulta(String.Format("SELECT IdFactura, FechaActual, IdEmpleado, IdCliente FROM factura;"));
+            DataTable Datos = conexion.consulta(String.Format("SELECT a.IdFactura,a.FechaActual as 'Fecha de venta',b.nombre as 'Nombre del cliente',c.nombre as 'Nombre del empleado' FROM ventas_comedor.factura a join ventas_comedor.cliente b on a.idCliente =b.idCliente  join  ventas_comedor.empleado c on c.idEmpleado =a.IdEmpleado;"));
             dgvFactura.DataSource = Datos;
             dgvFactura.Refresh();
         }

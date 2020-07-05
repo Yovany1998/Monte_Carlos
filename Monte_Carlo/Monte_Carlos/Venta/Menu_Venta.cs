@@ -40,6 +40,9 @@ namespace Monte_Carlos.Venta
 
         private void btnReturn_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
+            Menu ventana = new Menu();
+            ventana.Show();
 
         }
     }

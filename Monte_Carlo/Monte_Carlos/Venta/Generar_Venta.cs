@@ -185,6 +185,7 @@ namespace Monte_Carlos.Venta
                 MessageBox.Show("La venta ha sido cancelada", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 venta.IdVenta = Convert.ToInt32(txtIdVenta.Text);
                 limpiar();
+                contador = 2;
                 limpiardetalle();
 
                 DataTable Datos = conexion.consulta(String.Format("SELECT idVenta as 'Numero De Venta',idFactura as 'Numero De Factura',idComida as 'Comida',precio as 'Precio',Cantidad,Total FROM DetalleDeFactura  where idFactura = {0};", venta.IdVenta));

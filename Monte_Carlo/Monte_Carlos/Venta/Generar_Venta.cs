@@ -170,6 +170,7 @@ namespace Monte_Carlos.Venta
             {
                 MessageBox.Show("Ingrese una cantidad mayor a 0", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtPrecio.Focus();
+                contador = 1;
                 validar = false;
             }
             else
